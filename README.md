@@ -1,4 +1,4 @@
-Woovi Leaky Bucket Challenge
+# Woovi Leaky Bucket Challenge
 
 This project implements a leaky bucket algorithm to limit transaction fees.
 
@@ -23,22 +23,22 @@ The main functionality is a transaction processing system with rate limits. It u
 
 ### 1. Clone the Repository
 
-bash
-git clone <repository-url>
+```bash
+git clone https://github.com/f0rest775/woovi-leaky-bucket-challenge.git
 cd woovi-leaky-bucket-challenge
 ```
 
 ### 2. Install Dependencies
 
-bash
-pnpm Installation
+```bash
+pnpm install
 ```
 
 ### 3. Configure Environment Variables
 
 Copy the `.env.example` file to a new file called `.env`.
 
-bash
+```bash
 cp .env.example .env
 ```
 
@@ -46,7 +46,6 @@ The `.env` file has the following variables:
 
 - `PORT`: The port on which the application will run.
 - `REDIS_URL`: A URL to the Redis instance.
-
 - `JWT_SECRET`: A secret key for generating JWT tokens.
 
 ### 4. Start the Services
@@ -74,7 +73,7 @@ pnpm build
 To run the application in production mode:
 
 ```bash
-ppm start
+pnpm start
 ```
 
 ## API Routes
@@ -91,7 +90,7 @@ Authenticates a user and returns a JWT token.
 
 ```json
 {
-"email": "test1@test.com"
+  "email": "test1@test.com"
 }
 ```
 
@@ -99,7 +98,7 @@ Authenticates a user and returns a JWT token.
 
 ```json
 {
-"token": "your-jwt-token"
+  "token": "your-jwt-token"
 }
 ```
 
@@ -107,7 +106,7 @@ Authenticates a user and returns a JWT token.
 
 ```json
 {
-"message": "Invalid Email"
+  "message": "Invalid Email"
 }
 ```
 
@@ -123,8 +122,8 @@ Processes a transaction.
 
 ```json
 {
-"quantity": 5000,
-"pixKey": "recipient-pix-key"
+  "quantity": 5000,
+  "pixKey": "recipient-pix-key"
 }
 ```
 
@@ -132,9 +131,9 @@ Processes a transaction.
 
 ```json
 {
-"message": "Transaction completed successfully.",
-"tokens": 10,
-"last top-up": "2025-07-11T10:00:00.000Z"
+  "message": "Transaction completed successfully.",
+  "tokens": 10,
+  "last top-up": "2025-07-11T10:00:00.000Z"
 }
 ```
 
@@ -143,7 +142,6 @@ Processes a transaction.
 - **400 (Bad Request):** If the transaction amount exceeds the maximum allowed amount.
 - **404 (Not Found):** If the `pixKey` is invalid.
 - **429 (Too Many Requests):** If the user has reached the transaction limit.
-
 - **500 (Internal Server Error):** If an unexpected error occurs.
 
 ## How to run tests
