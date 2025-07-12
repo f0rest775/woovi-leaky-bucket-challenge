@@ -21,13 +21,8 @@
 				},
 				"url": {
 					"raw": "{{baseUrl}}/api/login",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"api",
-						"login"
-					]
+					"host": ["{{baseUrl}}"],
+					"path": ["api", "login"]
 				}
 			},
 			"response": []
@@ -58,13 +53,8 @@
 				},
 				"url": {
 					"raw": "{{baseUrl}}/api/transaction",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"api",
-						"transaction"
-					]
+					"host": ["{{baseUrl}}"],
+					"path": ["api", "transaction"]
 				}
 			},
 			"response": []

@@ -122,7 +122,7 @@ Processes a transaction.
 
 ```json
 {
-  "quantity": 5000,
+  "amount": 5000,
   "pixKey": "recipient-pix-key"
 }
 ```
